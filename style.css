@@ -62,7 +62,7 @@ body {
   color: #f44336;
 }
 
-.container {
+.container-apresentacao {
   max-width: 1300px;
   margin: 0 auto;
   padding-top: 10px;
@@ -113,4 +113,82 @@ body {
 
 .apresentacao .botao-sobre:hover {
   background: rgba(244, 67, 54, 0.1);
+}
+
+.container-sobre {
+  max-width: 900px;
+  margin: 0 auto;
+  padding-top: 160px;
+}
+
+.sobre .sobre-mim {
+  display: flex;
+  justify-content: first baseline;
+  flex-wrap: nowrap;
+  gap: 30px;
+  padding-bottom: 100px;
+}
+
+.sobre .img-perfil img {
+  max-width: 300px;
+  max-height: 300px;
+  border-radius: 8px;
+  filter: saturate(0%);
+  -webkit-filter: saturate(0%);
+  -moz-filter: saturate(0%);
+  /* border: 2px solid #f44336; */
+  position: relative;
+}
+
+.img-perfil {
+  box-sizing: border-box;
+  margin: 1em auto;
+  position: relative;
+}
+
+.img-perfil::after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  bottom: -15px;
+  left: 15px;
+  border-radius: 8px;
+  border: 3px solid rgba(255, 0, 0, 0.5);
+}
+
+.img-perfil:hover::after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  bottom: -13px;
+  left: 13px;
+  border-radius: 8px;
+  border: 3px solid rgba(255, 0, 0, 0.5);
+}
+
+.img-perfil img:hover {
+  filter: none;
+  -webkit-filter: none;
+  -moz-filter: none;
+}
+
+.sobre-mim p {
+  color: #a7a7a7;
+}
+
+.sobre h2::before {
+  content: "0.1";
+  color: #f44336;
+  padding-right: 10px;
+  font-size: 0.8em;
+}
+
+.sobre h2 {
+  color: white;
+  display: block;
+  padding-bottom: 40px;
 }
